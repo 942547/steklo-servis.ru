@@ -15,17 +15,6 @@ FACEBOOK: https://www.facebook.com/themefisher
 @import url('http://fonts.fontstorage.com/import/asketnarrow.css');
 @import url('http://fonts.fontstorage.com/import/stereonicxs.css');
 
-@font-face {
-  font-family: 'Stereonic XS';
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Asket Narrow';
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
     font-family: 'Asket Narrow';
 }
@@ -869,10 +858,6 @@ a:focus, a:hover {
 
 .slick-arrow:focus {
   outline: 0;
-}
-
-.slick-arrow:hover {
-  /* background: #28ABE3; */
 }
 
 .prevArrow {
