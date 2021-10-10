@@ -1,16 +1,15 @@
 description = "Slider Partial"
 ==
 <div class="hero-slider">
-    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'slider/1.jpg' | media | resize(1000) }})">
+    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/2.jpg' | media | resize(1280) }})">
         <div class="container">
             <div class="d-flex">
                 <div class="slider-content ml-md-5">
                     <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
-                        Входные группы <br>
-                        из стекла
+                        Безрамное остекление
                     </h1>
                     <div  class='mb-4' data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                        {% content "slider-1.htm" %}
+                        {% content "slider/1.htm" %}
                     </div>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
                         href="{{ 'input-groups'|page }}">Подробнее</a>
@@ -19,24 +18,7 @@ description = "Slider Partial"
         </div>
     </div>
 
-    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'slider/2.jpg' | media | resize(1000) }})">
-        <div class="container">
-            <div class="d-flex">
-                <div class="slider-content ml-md-5">
-                    <h2 class='h1' data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
-                        Цельностеклянные двери
-                    </h2>
-                    <div  data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                        {% content "slider-2.htm" %}
-                    </div>
-                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
-                        href="{{ 'dors'|page }}">Подробнее</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'slider/3.jpg' | media | resize(1000) }})">
+    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/7.jpg' | media | resize(1280) }})">
         <div class="container">
             <div class="d-flex">
                 <div class="slider-content ml-md-5">
@@ -44,10 +26,27 @@ description = "Slider Partial"
                         Стеклянные перегородки
                     </h2>
                     <div  data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                        {% content "slider-3.htm" %}
+                        {% content "slider/3.htm" %}
                     </div>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
                         href="{{ 'partitions'|page }}">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/8.jpg' | media | resize(1280) }})">
+        <div class="container">
+            <div class="d-flex">
+                <div class="slider-content ml-md-5">
+                    <h2 class='h1' data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
+                        Стеклянные козырьки
+                    </h2>
+                    <div  data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
+                        {% content "slider/2.htm" %}
+                    </div>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
+                        href="{{ 'dors'|page }}">Подробнее</a>
                 </div>
             </div>
         </div>

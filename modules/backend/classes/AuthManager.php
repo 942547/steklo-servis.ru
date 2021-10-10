@@ -226,6 +226,10 @@ class AuthManager extends RainAuthManager
             return false;
         }
 
+        if ($user->deleted_at !== null) {
+            return false;
+        }
+
         return $user;
     }
 

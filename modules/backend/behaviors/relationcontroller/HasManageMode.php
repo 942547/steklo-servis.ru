@@ -3,6 +3,7 @@
 use Lang;
 use Request;
 use Backend\Behaviors\RelationController;
+use Illuminate\Database\Eloquent\Relations\HasOneOrMany;
 use ApplicationException;
 
 /**
@@ -14,6 +15,11 @@ trait HasManageMode
      * @var Backend\Classes\WidgetBase manageWidget used for relation management
      */
     protected $manageWidget;
+
+    /**
+     * @var Model manageModel is a reference to the model used for manage form
+     */
+    protected $manageModel;
 
     /**
      * @var \Backend\Widgets\Filter manageFilterWidget
@@ -164,10 +170,11 @@ trait HasManageMode
              * Existing record
              */
             if ($this->manageId) {
-                $model = $config->model->find($this->manageId);
-                if ($model) {
-                    $config->model = $model;
-                } else {
+                $this->manageModel = $config->model->find($this->manageId);
+                if ($this->manageModel) {
+                    $config->model = $this->manageModel;
+                }
+                else {
                     throw new ApplicationException(Lang::get('backend::lang.model.not_found', [
                         'class' => get_class($config->model),
                         'id' => $this->manageId,
@@ -226,57 +233,32 @@ trait HasManageMode
     public function onRelationManageCreate()
     {
         $this->forceManageMode = 'form';
+
         $this->beforeAjax();
+
         $saveData = $this->manageWidget->getSaveData();
         $sessionKey = $this->deferredBinding ? $this->relationGetSessionKey(true) : null;
         $parentModel = $this->relationObject->getParent();
+        $newModel = $this->relationModel;
 
-        if ($this->viewMode === 'multi') {
-            // In special cases, has one/many will require a foreign key set
-            // to pass any constraints imposed by the database. This emulates
-            // the "create" method on the relation object.
-            $isSavable = $parentModel->exists &&
-                in_array($this->relationType, ['hasOne', 'hasMany', 'morphOne', 'morphMany']);
-
-            // The make() method will assign the necessary foreign attributes
-            $newModel = $isSavable
-                ? $this->relationObject->make()
-                : $this->relationModel;
-
-            $modelsToSave = $this->prepareModelsToSave($newModel, $saveData);
-            foreach ($modelsToSave as $modelToSave) {
-                $modelToSave->save(null, $this->manageWidget->getSessionKey());
-            }
-
-            // No need to add relationships that have already been associated
-            if (!$isSavable) {
-                $this->relationObject->add($newModel, $sessionKey);
-            }
+        $modelsToSave = $this->prepareModelsToSave($newModel, $saveData);
+        foreach ($modelsToSave as $modelToSave) {
+            $modelToSave->save(null, $this->manageWidget->getSessionKey());
         }
-        elseif ($this->viewMode === 'single') {
-            $newModel = $this->viewModel;
-            $this->viewWidget->setFormValues($saveData);
 
-            /*
-             * Has one relations will save as part of the add() call.
-             */
-            if ($this->deferredBinding || in_array($this->relationType, ['hasOne', 'morphOne'])) {
-                $newModel->save(null, $this->manageWidget->getSessionKey());
-            }
-
+        // No need to add relationships that have a valid assocation via HasOneOrMany::make
+        if (!$this->relationObject instanceof HasOneOrMany || !$parentModel->exists) {
             $this->relationObject->add($newModel, $sessionKey);
+        }
 
-            /*
-             * Belongs to relations won't save when using add() so
-             * it should occur if the conditions are right.
-             */
-            if (
-                !$this->deferredBinding &&
-                $this->relationType === 'belongsTo' &&
-                $parentModel->exists
-            ) {
-                $parentModel->save();
-            }
+        // Belongs To won't save when using add() so it should occur if the conditions are right.
+        if ($this->relationType === 'belongsTo' && $parentModel->exists && !$this->deferredBinding) {
+            $parentModel->save();
+        }
+
+        // Display updated form
+        if ($this->viewMode === 'single') {
+            $this->viewWidget->setFormValues($saveData);
         }
 
         $this->showFlashMessage('flashCreate');
@@ -290,19 +272,19 @@ trait HasManageMode
     public function onRelationManageUpdate()
     {
         $this->forceManageMode = 'form';
+
         $this->beforeAjax();
+
         $saveData = $this->manageWidget->getSaveData();
 
-        if ($this->viewMode === 'multi') {
-            $model = $this->manageWidget->model;
-            $modelsToSave = $this->prepareModelsToSave($model, $saveData);
-            foreach ($modelsToSave as $modelToSave) {
-                $modelToSave->save(null, $this->manageWidget->getSessionKey());
-            }
+        $modelsToSave = $this->prepareModelsToSave($this->manageModel, $saveData);
+        foreach ($modelsToSave as $modelToSave) {
+            $modelToSave->save(null, $this->manageWidget->getSessionKey());
         }
-        elseif ($this->viewMode === 'single') {
+
+        // Display updated form
+        if ($this->viewMode === 'single') {
             $this->viewWidget->setFormValues($saveData);
-            $this->viewModel->save(null, $this->manageWidget->getSessionKey());
         }
 
         $this->showFlashMessage('flashUpdate');
@@ -389,11 +371,8 @@ trait HasManageMode
                 $this->relationObject->add($model, $sessionKey);
                 $this->viewWidget->setFormValues($model->attributes);
 
-                /*
-                 * Belongs to relations won't save when using add() so
-                 * it should occur if the conditions are right.
-                 */
-                if (!$this->deferredBinding && $this->relationType === 'belongsTo') {
+                // Belongs To won't save when using add() so it should occur if the conditions are right.
+                if ($this->relationType === 'belongsTo' && !$this->deferredBinding) {
                     $parentModel = $this->relationObject->getParent();
                     if ($parentModel->exists) {
                         $parentModel->save();
