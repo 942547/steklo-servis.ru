@@ -162,10 +162,6 @@ a:hover {
   background: var(--accent);
 }
 
-.cards > * {
-  margin-bottom: var(--bs-gutter-x);
-}
-
 .card_main {
   padding: 2em;
   background-size: cover;

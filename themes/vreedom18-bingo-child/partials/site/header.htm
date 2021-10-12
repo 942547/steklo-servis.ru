@@ -7,42 +7,23 @@ Fixed Navigation
     <div class="container">
         <!-- main nav -->
         <nav class="navbar navbar-expand-lg navbar-light px-0">
-            <!-- logo -->
+
             <a class="navbar-brand logo" href="{{ 'index'|page }}">
-                {# <img loading="lazy" class="logo-default" src="{{ 'logo/logo.png' | media | resize(180) }}" alt="logo" /> #}
-                {# <img loading="lazy" class="logo-white" src="{{ 'logo/logo-white.png' | media | resize(180) }}" alt="logo" /> #}
+                {# <img loading="lazy" class="logo-default" src="{{ 'logo/logo.png' | media | resize(180) }}"
+                    alt="logo" /> #}
+                {# <img loading="lazy" class="logo-white" src="{{ 'logo/logo-white.png' | media | resize(180) }}"
+                    alt="logo" /> #}
                 СтеклоСервис
-            </a>
-            <!-- /logo -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            </a> <!-- End logo -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navigation">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto text-center">
-                    {# <li class="nav-item dropdown {% if this.page.id == 'index' %}active{% elseif this.page.id == 'onepage-slider' %}active{% elseif this.page.id == 'onepage-text' %}active{% endif %}">
-                        <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Главная <i class="tf-ion-chevron-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ 'index'|page }}">Главная</a></li>
-                            <li><a class="dropdown-item" href="{{ 'onepage-slider'|page }}">Onepage</a></li>
-                            <li><a class="dropdown-item" href="{{ 'onepage-text'|page }}">Onepage 2</a></li>
-
-                            <li class="dropdown dropdown-submenu dropright">
-                                <a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu <i
-                                        class="tf-ion-chevron-down"></i></a>
-
-                                <ul class="dropdown-menu" aria-labelledby="dropdown0501">
-                                    <li><a class="dropdown-item" href="{{ 'index'|page }}">Submenu 01</a></li>
-                                    <li><a class="dropdown-item" href="{{ 'index'|page }}">Submenu 02</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li> #}
                     <li class="nav-item {% if this.page.id == 'index' %}active{% endif %}">
                         <a class="nav-link" href="{{ 'index'|page }}">Главная</a>
                     </li>
@@ -52,7 +33,8 @@ Fixed Navigation
                     {# <li class="nav-item {% if this.page.id == 'service' %}active{% endif %}">
                         <a class="nav-link" href="{{ 'service'|page }}">Услуги</a>
                     </li> #}
-                    <li class="nav-item dropdown {% if this.page.id == 'service' %}active{% elseif this.page.id == 'onepage-slider' %}active{% elseif this.page.id == 'onepage-text' %}active{% endif %}">
+                    <li
+                        class="nav-item dropdown {% if this.page.id == 'service' %}active{% elseif this.page.id == 'onepage-slider' %}active{% elseif this.page.id == 'onepage-text' %}active{% endif %}">
                         <a class="nav-link dropdown-toggle" href="#!" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Услуги <i class="tf-ion-chevron-down"></i>
