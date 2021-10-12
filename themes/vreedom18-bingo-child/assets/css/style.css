@@ -1,27 +1,61 @@
-/*
-THEME: Bingo | Responsive Multipurpose Parallax HTML5 Template
-VERSION: 1.0.0
-AUTHOR: Themefisher
-
-HOMEPAGE: https://themefisher.com/products/bingo-bootstrap-business-template/
-DEMO: https://demo.themefisher.com/themefisher/bingo/
-GITHUB: https://github.com/themefisher/Bingo-Bootstrap-Business-Template
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK: https://www.facebook.com/themefisher
-*/
-/*=== MEDIA QUERY ===*/
 @import url('http://fonts.fontstorage.com/import/asketnarrow.css');
 @import url('http://fonts.fontstorage.com/import/stereonicxs.css');
 
 :root {
-  --accent: #000;
-  --text-color: #848484;
+	--accent: #000;
+	--fontsize: 16px;
+	--textcolor: #848484;
+	--lineheight: 1.65;
+	--userfont: 'Asket Narrow';
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
+/* .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; } */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
 body {
-  font-family: 'Asket Narrow';
+	font-family: var(--userfont);
+	font-size: var(--fontsize);
+	line-height: var(--lineheight);
+	color: var(--textcolor);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+}
+
+.accent {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+.col__img {
+  background-image: var(--bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 250px;
+  height: 100%;
+}
+
+button:focus {
+  outline-color: var(--accent)
 }
 
 .navbar-brand,
@@ -44,11 +78,11 @@ h3,
 }
 
 /* @import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600"); */
-body {
-  line-height: 1.4;
+/* body { */
+  /* line-height: 1.4; */
   /* font-family: "Source Sans Pro", sans-serif; */
-  -webkit-font-smoothing: antialiased;
-}
+  /* -webkit-font-smoothing: antialiased; */
+/* } */
 
 p {
   /* font-family: "Source Sans Pro", sans-serif; */
@@ -129,7 +163,7 @@ a:hover {
 }
 
 .cards > * {
-  margin-bottom: 30px;
+  margin-bottom: var(--bs-gutter-x);
 }
 
 .card_main {
@@ -139,7 +173,7 @@ a:hover {
   background-position: center center;
   color: #fff;
   height: 100%;
-  padding-bottom: 30px;
+  padding-bottom: var(--bs-gutter-x);
   transition: all 0.3s ease 0s;
   background-image: var(--bg);
   position: relative;
@@ -204,6 +238,10 @@ a:hover {
 
 .mt-50 {
   margin-top: 50px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
 }
 
 .section {
@@ -343,7 +381,7 @@ a:hover {
     height: 30px;
     -webkit-transform: translateY(15px);
     transform: translateY(15px);
-    background: #3498db;
+    background: var(--accent);
   }
 
   50%,
@@ -512,7 +550,7 @@ a:hover {
 }
 
 .single-page-header:before {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   content: '';
   top: 0;

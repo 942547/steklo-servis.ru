@@ -3,12 +3,68 @@ layout = "default"
 title = "Безрамное остекление"
 is_hidden = 0
 ==
-{% partial 'site/sp-header' %}
-{% partial 'about/about-shot-info' %}
-{% partial 'about/company-mission' %}
-{% partial 'about/promo-video' %}
-{% partial 'onepage-slider/cta' %}
-{% partial 'about/gallery' %}
-{% partial 'onepage-slider/team' %}
-{% partial 'index/counter' %}
+{% partial 'site/sp-header' bg='services/bezramnoye-ostekleniye.jpg' %}
+
+<section class="my-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
+
+            <div class="col align-self-center mb-30 order-0">
+                <div class="d-flex h-100 align-items-center">
+                    <div class="col__content">
+                        <h2>Безрамное остекление террасы</h2>
+                        <p>Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты.
+                            Осталось страна по всей обеспечивает. Города сбить семь запятой всеми. Рот силуэт
+                            послушавшись обеспечивает коварный свое жаренные выйти образ щеке первую!</p>
+                    </div> <!-- End content -->
+                </div> <!-- End flex -->
+            </div> <!-- End col -->
+
+            <div class="col mb-30 order-1">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/bezramnoye-ostekleniye-terrasy.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+            <div class="col align-self-center mb-30 order-2 order-md-3">
+                <div class="d-flex h-100 align-items-center">
+                    <div class="col__content">
+                        <h2>Безрамное остекление веранды</h2>
+                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Решила
+                            переписали курсивных которое первую?</p>
+                    </div> <!-- End content -->
+                </div> <!-- End flex -->
+            </div> <!-- End col -->
+
+            <div class="col mb-30 order-3 order-md-2">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/bezramnoye-ostekleniye-verandy.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+            <div class="col align-self-center mb-30 order-4">
+                <div class="d-flex h-100 align-items-center">
+                    <div class="col__content">
+                        <h2>Пристройки из стекла</h2>
+                        <p>Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты.
+                            Осталось страна по всей обеспечивает. Города сбить семь запятой всеми. Рот силуэт
+                            послушавшись обеспечивает коварный свое жаренные выйти образ щеке первую!</p>
+                    </div> <!-- End content -->
+                </div> <!-- End flex -->
+            </div> <!-- End col -->
+
+            <div class="col mb-30 order-5">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/pristroyki-iz-stekla.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+        </div> <!-- End row -->
+    </div>
+</section>
+
+{# {% partial 'about/about-shot-info' %} #}
+{# {% partial 'about/company-mission' %} #}
+{# {% partial 'about/promo-video' %} #}
+{# {% partial 'onepage-slider/cta' %} #}
+{# {% partial 'about/gallery' %} #}
+{# {% partial 'onepage-slider/team' %} #}
+{# {% partial 'index/counter' %} #}
 {% partial 'index/cta' %}
