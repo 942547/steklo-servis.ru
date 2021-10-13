@@ -4,6 +4,34 @@ title = "Стеклянные полы"
 is_hidden = 0
 ==
 {% partial 'site/sp-header' bg='services/steklyannyye-poly.jpg'%}
+
+<section class="my-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 align-items-center g-5">
+            <div class="col align-self-center order-0">
+                {# <h2>Входные двери из стекла</h2> #}
+                <p>Стеклянные полы изготавливаются и особо прочного, безопасного стекла – многослойного триплекса, которое способно выдержать сильные нагрузки. Стекло укладывают на специальный каркас из прочного металла. К созданию полов из стекла предъявляются самые высокие требования. Поэтому проектирование этого вида изделий - очень важный процесс.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-1">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/steklyannyye-poly_1.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+            <div class="col align-self-center order-2 order-md-3">
+                {# <h2>Межкомнатные двери из стекла</h2> #}
+                <p>Стекло для создания полов может быть матовым или прозрачным, с рисунком или без. Так же возможны различные варианты игры с цветом, подсветкой, созданием декоративных подстекольных икебан. Полет дизайнерской фантазии при создании стеклянных полов безграничен.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-3 order-md-2">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/steklyannyye-poly_2.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+        </div> <!-- End row -->
+    </div>
+</section>
+
 {# {% partial 'about/about-shot-info' %} #}
 {# {% partial 'about/company-mission' %} #}
 {# {% partial 'about/promo-video' %} #}
@@ -11,4 +39,4 @@ is_hidden = 0
 {# {% partial 'about/gallery' %} #}
 {# {% partial 'onepage-slider/team' %} #}
 {# {% partial 'index/counter' %} #}
-{# {% partial 'index/cta' %} #}
+{% partial 'index/cta' %}

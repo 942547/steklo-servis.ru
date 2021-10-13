@@ -1,22 +1,6 @@
 description = "Slider Partial"
 ==
 <div class="hero-slider">
-    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/bezramnoye-ostekleniye.jpg' | media | resize(1280) }})">
-        <div class="container">
-            <div class="d-flex">
-                <div class="slider-content ms-md-5">
-                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
-                        Безрамное остекление
-                    </h1>
-                    <div  class='mb-4' data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
-                        {% content "slider/1.htm" %}
-                    </div>
-                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
-                        href="{{ 'bezramnoye-ostekleniye' | page }}">Подробнее</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/steklyannyye-peregorodki.jpg' | media | resize(1280) }})">
         <div class="container">
@@ -30,6 +14,23 @@ description = "Slider Partial"
                     </div>
                     <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
                         href="{{ 'steklyannyye-peregorodki' | page }}">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="slider-item th-fullpage hero-area" style="--bg: url({{ 'services/bezramnoye-ostekleniye.jpg' | media | resize(1280) }})">
+        <div class="container">
+            <div class="d-flex">
+                <div class="slider-content ms-md-5">
+                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">
+                        Безрамное остекление
+                    </h1>
+                    <div  class='mb-4' data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">
+                        {% content "slider/1.htm" %}
+                    </div>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-transparent"
+                        href="{{ 'bezramnoye-ostekleniye' | page }}">Подробнее</a>
                 </div>
             </div>
         </div>

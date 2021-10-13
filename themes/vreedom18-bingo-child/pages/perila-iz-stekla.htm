@@ -1,9 +1,37 @@
 url = "/perila-iz-stekla"
 layout = "default"
-title = "Перила из стекла"
+title = "Перила и ограждения из стекла"
 is_hidden = 0
 ==
 {% partial 'site/sp-header' bg='services/perila-iz-stekla.jpg'%}
+
+<section class="my-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 align-items-center g-5">
+            <div class="col align-self-center order-0">
+                {# <h2>Входные двери из стекла</h2> #}
+                <p>Стильные стеклянные ограждения сегодня активно используются как в жилых, так и в общественных помещениях, будь то частный дом, офисное здание или торговый центр. Такие конструкции гармонично дополняют интерьер, не привлекая особого внимания, и визуально увеличивают пространство.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-1">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/perila-iz-stekla_1.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+            <div class="col align-self-center order-2 order-md-3">
+                {# <h2>Межкомнатные двери из стекла</h2> #}
+                <p>Конструкции без стоек позволяют создать в большом помещении ощущение простора и эффект единого пространства. Если в здании достаточное количество солнечного света, мы рекомендуем использовать ограждения с толстым осветленным стеклом. Оно более прозрачное, чем, к примеру, триплекс. Такой материал позволит посетителям торгового центра четко видеть витрины и вывески магазинов.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-3 order-md-2">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/perila-iz-stekla_2.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+        </div> <!-- End row -->
+    </div>
+</section>
+
 {# {% partial 'about/about-shot-info' %} #}
 {# {% partial 'about/company-mission' %} #}
 {# {% partial 'about/promo-video' %} #}
@@ -11,4 +39,4 @@ is_hidden = 0
 {# {% partial 'about/gallery' %} #}
 {# {% partial 'onepage-slider/team' %} #}
 {# {% partial 'index/counter' %} #}
-{# {% partial 'index/cta' %} #}
+{% partial 'index/cta' %}

@@ -1,9 +1,37 @@
 url = "/bezramnoye-ostekleniye-balkonov"
 layout = "default"
-title = "Безрамное остекление балконов"
+title = "Безрамное остекление балкона и лоджии"
 is_hidden = 0
 ==
 {% partial 'site/sp-header' bg='services/bezramnoye-ostekleniye-balkonov.jpg'%}
+
+<section class="my-5">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 gy-3 g-md-3 g-lg-4 g-xl-5">
+            <div class="col align-self-center order-0">
+                {# <h2>Безрамное остекление балкона </h2> #}
+                <p>Безрамное остекление балконов и лоджий — передовая технология в сфере остекления. При ее использовании удается сохранить в неизменном виде архитектуру и внешний вид фасада здания. Этот способ остекления подходит и для новостроек, и для старых домов.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-1">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/bezramnoye-ostekleniye-balkonov_1.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+            <div class="col align-self-center order-2 order-md-3">
+                {# <h2>Безрамное остекление лоджии</h2> #}
+                <p>Технология появилась относительно недавно и пока еще не пользуется повсеместной популярностью, но с каждым годом владельцы балконов и лоджий выбирают ее все чаще.</p>
+            </div> <!-- End col -->
+
+            <div class="col order-3 order-md-2">
+                <div class="col__img h-100"
+                    style="--bg: url({{'services/bezramnoye-ostekleniye-lodzhii.jpg' | media | resize(600) }});"></div>
+            </div> <!-- End col -->
+
+        </div> <!-- End row -->
+    </div>
+</section>
+
 {# {% partial 'about/about-shot-info' %} #}
 {# {% partial 'about/company-mission' %} #}
 {# {% partial 'about/promo-video' %} #}
@@ -11,4 +39,4 @@ is_hidden = 0
 {# {% partial 'about/gallery' %} #}
 {# {% partial 'onepage-slider/team' %} #}
 {# {% partial 'index/counter' %} #}
-{# {% partial 'index/cta' %} #}
+{% partial 'index/cta' %}
