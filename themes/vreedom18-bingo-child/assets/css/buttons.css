@@ -1,0 +1,25 @@
+.btn-accent,
+.btn-transparent {
+    border-radius: 0;
+    border: 1px solid #fff;
+    font-size: .8em;
+    padding: .8em 1.8em;
+    text-transform: uppercase;
+}
+
+.btn-accent,
+.btn-transparent:hover {
+    background: var(--accent);
+}
+
+.btn-accent,
+.btn-transparent,
+.btn-accent:hover,
+.btn-transparent:hover,
+.btn:focus {
+    color: #fff
+}
+
+/* .btn.active:focus,.btn:active:focus,.btn:focus {
+    outline: 0
+} */

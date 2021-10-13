@@ -1780,7 +1780,7 @@ a:hover {
   width: 35px;
 }
 
-.team .member-photo .mask ul li a::hover {
+.team .member-photo .mask ul li a:hover {
   background-color: #6cb670;
   border: 1px solid transparent;
 }

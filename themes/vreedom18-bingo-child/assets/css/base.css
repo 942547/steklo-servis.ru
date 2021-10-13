@@ -1,0 +1,56 @@
+:root {
+    --accent: #000;
+    --fontsize: 16px;
+    --lineheight: 1.65;
+    --textcolor: #848484;
+    --transition: all .3s ease 0s;
+    --userfont: 'Asket Narrow';
+}
+
+::placeholder {
+    color: #666
+}
+
+::selection {
+    background-color: var(--accent);
+    color: #fff
+}
+
+input,textarea {
+    outline: 0
+}
+
+input:focus:required:invalid,textarea:focus:required:invalid {
+    border-color: red
+}
+
+input:required:valid,textarea:required:valid {
+    border-color: green
+}
+
+body {
+    color: var(--textcolor);
+    font: var(--fontsize)/var(--lineheight) var(--userfont);
+    min-width: 320px;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased
+}
+
+.bg {
+    background-image: var(--bg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.d-grid {
+    display: grid
+}
+
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}

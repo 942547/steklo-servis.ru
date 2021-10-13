@@ -1,0 +1,40 @@
+.card_bg-image {
+    color: #fff;
+    transition: var(--transition);
+}
+
+.card_bg-image::before {
+    background-color: rgba(0,0,0,.5);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* transition: all .3s ease 0s; */
+    transition: var(--transition);
+    z-index: 0
+}
+
+.card_bg-image:hover {
+    box-shadow: 0 5px 65px 0 rgb(0 0 0/15%);
+    color: #000
+}
+
+.card_bg-image:hover .btn-transparent {
+    border-color: #000;
+    color: #000;
+    /* transition: all .3s ease 0s */
+    transition: var(--transition);
+}
+
+.card_bg-image:hover .btn-transparent:hover {
+    background-color: #000;
+    border-color: #fff;
+    color: #fff
+}
+
+.card_bg-image:hover::before {
+    backdrop-filter: blur(10px);
+    background: rgba(242,242,242,.6)
+}
