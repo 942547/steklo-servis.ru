@@ -180,7 +180,7 @@ a:hover {
   color: #fff;
 }
 
-.btn-transparent {
+.btn_transparent {
   color: #fff;
   border: 1px solid #fff;
   display: inline-block;
@@ -191,7 +191,7 @@ a:hover {
   border-radius: 0;
 }
 
-.btn-transparent:hover {
+.btn_transparent:hover {
   color: #fff;
   background: var(--accent);
 }
@@ -215,13 +215,13 @@ a:hover {
   color: #000;
 }
 
-.card_main:hover .btn-transparent {
+.card_main:hover .btn_transparent {
   border-color: #000;
   color: #000;
   transition: all 0.3s ease 0s;
 }
 
-.card_main:hover .btn-transparent:hover {
+.card_main:hover .btn_transparent:hover {
   background-color: #000;
   color: #fff;
   border-color: #fff;
@@ -423,23 +423,23 @@ a:hover {
   }
 }
 
-.title {
+.section__title {
   /* padding-bottom: 50px; */
   overflow: hidden;
 }
 
-.title h2 {
+.section__title h2 {
   font-weight: 600;
   font-size: 35px;
   color: #232323;
 }
 
-.title p {
+.section__title p {
   color: var(--text-color);
   margin: 0 auto;
 }
 
-.title.title-white h2 {
+.section__title.title-white h2 {
   color: #fff;
 }
 
@@ -2569,7 +2569,7 @@ a:hover {
 
   /* fun facts */
   /* services */
-  #services .title {
+  #services .section__title {
     padding-bottom: 60px;
   }
 
@@ -2692,7 +2692,7 @@ a:hover {
 	Mobile (Landscape) Design for a width of 480px
 ==============================================================*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .title h2 {
+  .section__title h2 {
     font-size: 32px;
   }
 

@@ -2,9 +2,11 @@
     --accent: #000;
     --fontsize: 16px;
     --lineheight: 1.65;
+    --overlay: rgba(0, 0, 0, .5);
+    --overlay-hover: rgba(242, 242, 242, .5);
     --textcolor: #848484;
     --transition: all .3s ease 0s;
-    --userfont: 'Asket Narrow';
+    --userfont: 'Asket Narrow'
 }
 
 ::placeholder {
@@ -48,7 +50,7 @@ body {
     display: grid
 }
 
-.parallax-section {
+.parallax {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;

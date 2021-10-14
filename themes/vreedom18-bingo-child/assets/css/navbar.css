@@ -215,3 +215,30 @@
 .sticky-header .navbar-light .navbar-nav .nav-item .nav-link {
     color: #000
 }
+
+.header-bradcrumb {
+    background: 0 0
+}
+
+.header-bradcrumb .active,.header-bradcrumb a {
+    color: #cfcfcf;
+    font-weight: 200
+}
+
+.header-bradcrumb a:hover {
+    color: var(--accent)
+}
+
+.navigation {
+    transition: var(--transition);
+}
+
+.navigation .dropdown-toggle i {
+    font-size: 10px;
+    margin-left: 2px;
+    vertical-align: 2px
+}
+
+.navigation .dropdown-toggle::after,.navigation .dropdown-toggle::before,.navigation .logo-default {
+    display: none
+}

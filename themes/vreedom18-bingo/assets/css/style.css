@@ -89,7 +89,7 @@ a:focus, a:hover {
   color: #fff;
 }
 
-.btn-transparent {
+.btn_transparent {
   color: #fff;
   border: 1px solid #fff;
   display: inline-block;
@@ -100,7 +100,7 @@ a:focus, a:hover {
   border-radius: 0;
 }
 
-.btn-transparent:hover {
+.btn_transparent:hover {
   color: #fff;
   background: #28ABE3;
 }
@@ -266,23 +266,23 @@ a:focus, a:hover {
   }
 }
 
-.title {
+.section__title {
   padding-bottom: 50px;
   overflow: hidden;
 }
 
-.title h2 {
+.section__title h2 {
   font-weight: 600;
   font-size: 35px;
   color: #232323;
 }
 
-.title p {
+.section__title p {
   color: #848484;
   margin: 0 auto;
 }
 
-.title.title-white h2 {
+.section__title.title-white h2 {
   color: #fff;
 }
 
@@ -412,29 +412,14 @@ a:focus, a:hover {
 }
 
 .single-page-header {
-  background-image: url("../images/about/about-header.jpg");
-  background-size: cover;
   padding: 140px 0 70px;
-  text-align: center;
-  color: #fff;
-  position: relative;
-}
-
-.single-page-header:before {
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  content: '';
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
 }
 
 /*=================================================================
   Navigation
 ==================================================================*/
 .navigation {
-  transition: .3s all;
+  transition: var(--transition)
 }
 
 .navigation .logo-default {
@@ -2320,7 +2305,7 @@ a:focus, a:hover {
   }
   /* fun facts */
   /* services */
-  #services .title {
+  #services .section__title {
     padding-bottom: 60px;
   }
   /* our skills */
@@ -2419,7 +2404,7 @@ a:focus, a:hover {
 	Mobile (Landscape) Design for a width of 480px
 ==============================================================*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  .title h2 {
+  .section__title h2 {
     font-size: 32px;
   }
   .counter .counter-title h2 {

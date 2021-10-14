@@ -1,25 +1,21 @@
-.btn-accent,
-.btn-transparent {
+.btn_theme {
     border-radius: 0;
     border: 1px solid #fff;
     font-size: .8em;
     padding: .8em 1.8em;
-    text-transform: uppercase;
+    text-transform: uppercase
 }
 
-.btn-accent,
-.btn-transparent:hover {
-    background: var(--accent);
+.btn_theme,
+.btn_transparent:hover {
+    background: var(--accent)
 }
 
-.btn-accent,
-.btn-transparent,
-.btn-accent:hover,
-.btn-transparent:hover,
-.btn:focus {
+.btn_transparent {
+    background-color: transparent
+}
+
+.btn_theme,
+.btn_theme:hover {
     color: #fff
 }
-
-/* .btn.active:focus,.btn:active:focus,.btn:focus {
-    outline: 0
-} */

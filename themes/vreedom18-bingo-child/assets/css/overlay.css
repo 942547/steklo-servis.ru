@@ -1,0 +1,27 @@
+.overlay {
+    position: relative
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    background-color: var(--overlay);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.overlay-hover, .overlay-hover::before {
+    transition: var(--transition)
+}
+
+.overlay.overlay-hover:hover {
+    box-shadow: 0 5px 65px 0 rgb(0 0 0/15%);
+    color: #000
+}
+
+.overlay.overlay-hover:hover::before {
+    backdrop-filter: blur(10px);
+    background: var(--overlay-hover)
+}

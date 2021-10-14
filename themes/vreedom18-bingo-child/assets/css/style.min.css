@@ -3,6 +3,7 @@
 @import "base.css";
 @import "preloader.css";
 @import "navbar.css";
+@import "overlay.css";
 @import "buttons.css";
 @import "cards.css";
 
@@ -158,72 +159,27 @@ p:last-of-type {
     box-shadow: inset 0 0 6px rgba(0,0,0,.4)
 }
 
-.header-bradcrumb {
-    background: 0 0
-}
 
-.header-bradcrumb .active,.header-bradcrumb a {
-    color: #cfcfcf;
-    font-weight: 200
-}
-
-.header-bradcrumb a:hover {
-    color: var(--accent)
-}
-
-.logo {
-    display: inline-block
-}
-
-.navigation {
-    transition: var(--transition);
-}
-
-.navigation .dropdown-toggle i {
-    font-size: 10px;
-    margin-left: 2px;
-    vertical-align: 2px
-}
-
-.navigation .dropdown-toggle::after,.navigation .dropdown-toggle::before,.navigation .logo-default {
-    display: none
-}
 
 .single-page-header {
-    background-image: var(--bg);
-    background-position: center;
-    background-size: cover;
-    color: #fff;
-    padding: 140px 0 70px;
-    position: relative;
-    text-align: center
-}
-
-.single-page-header:before {
-    background: rgba(0,0,0,.6);
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0
+    padding: 140px 0 70px
 }
 
 .slick-slide {
     outline: 0
 }
 
-.title {
+.section__title {
     overflow: hidden
 }
 
-.title h2 {
+.section__title h2 {
     color: #232323;
     font-size: 35px;
     font-weight: 600
 }
 
-.title p {
+.section__title p {
     color: var(--text-color);
     margin: 0 auto
 }
@@ -1697,7 +1653,7 @@ p:last-of-type {
         height: 250px
     }
 
-    #services .title {
+    #services .section__title {
         padding-bottom: 60px
     }
 
@@ -1861,7 +1817,7 @@ p:last-of-type {
         margin: 0 auto
     }
 
-    .title h2 {
+    .section__title h2 {
         font-size: 32px
     }
 
